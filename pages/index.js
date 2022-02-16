@@ -1,9 +1,24 @@
+import React from 'react';
 import Link from '../src/components/Link';
+
+function Title({ children, as }) {
+    const Tag = as;
+    return (
+        <React.Fragment>
+            <Tag>{ children }</Tag>
+            <style jsx>{`
+                ${Tag} {
+                    color: red;
+                }
+            `}</style>
+        </React.Fragment>
+    )
+}
 
 export default function HomePage() {
     return (
         <div>
-            <h1>Curso ReactJS - Home</h1>
+            <Title as="h1">Curso ReactJS - Home</Title>
             <Link href="/faq">
                 FAQ
             </Link>
