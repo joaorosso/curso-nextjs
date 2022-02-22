@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import NextHead from 'next/head';
 import Link from '../src/components/Link';
 
 export async function getStaticProps() {
@@ -17,9 +17,11 @@ export async function getStaticProps() {
 }
 
 export default function FAQPage({ faq }) {
-    console.log(faq);
     return (
         <div>
+            <NextHead>
+            <title>FAQ - Curso NextJS</title>
+            </NextHead>
             <h1>Curso ReactJS - FAQ</h1>
             <Link href="/">
                 Home

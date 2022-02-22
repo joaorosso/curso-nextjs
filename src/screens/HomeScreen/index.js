@@ -1,7 +1,8 @@
-import Footer from '../../components/Footer'
-import Link from '../../components/Link'
+import NextHead from 'next/head';
+import Footer from '../../components/Footer';
+import Link from '../../components/Link';
+import { Box, Button, Icon, Image, Input, Text } from '../../theme/components';
 import { theme } from '../../theme/theme';
-import { Image, Box, Text, Icon, Input, Button } from '../../theme/components';
 
 const LOGO_ALURA_URL = '/images/alura-logo.svg';
 const SIDE_IMAGE_URL = '/images/alura-cases.png'
@@ -96,6 +97,9 @@ function SideImage() {
 export default function HomeScreen() {
   return (
     <Box>
+      <NextHead>
+        <title>Home - Curso NextJS</title>
+      </NextHead>
       <Box
         as="main"
         stylesheet={{
